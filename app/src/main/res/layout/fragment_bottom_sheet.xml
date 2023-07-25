@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="7dp"
+    tools:context=".fragments.BottomSheetFragment"
+    android:id="@+id/bottom_Sheet_fragment">
+
+
+    <ImageView
+        android:id="@+id/img_bottomSheet"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_100sdp"
+        android:layout_margin="7dp"
+        android:scaleType="centerCrop"
+        android:src="@color/purple_500"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/LL_bs"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/img_bottomSheet"
+        app:layout_constraintTop_toTopOf="@+id/img_bottomSheet">
+
+        <TextView
+            android:id="@+id/tv_area_bs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableStart="@drawable/location_img"
+            android:text="Area"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/tv_category_bs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableStart="@drawable/category_img"
+            android:text="Category"
+            android:textColor="@color/black" />
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tv_mealName_bs"
+        android:layout_width="255dp"
+        android:layout_height="67dp"
+        android:layout_marginTop="8dp"
+        android:text="Meal Name"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_16ssp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/LL_bs"
+        app:layout_constraintTop_toBottomOf="@+id/LL_bs" />
+
+    <TextView
+        android:id="@+id/tv_readMore_bs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Read More ..."
+        android:textSize="@dimen/_15ssp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tv_mealName_bs"
+        app:layout_constraintTop_toBottomOf="@+id/tv_mealName_bs"
+
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
